@@ -5,21 +5,21 @@
 class Cv < Formula
   desc "CLI for the .cv open file format (PDF + Markdown + HTML + embeddings)"
   homepage "https://cvfile.org"
-  version "0.3.0"
+  version "0.3.1"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/cvfile/cv/releases/download/v0.3.0/cv_0.3.0_macos_x86_64.tar.gz"
-      sha256 "b5b64faca87a2ea806e9981a11983007a963f9cb29d3314873d413a30c78045a"
+      url "https://github.com/cvfile/cv/releases/download/v0.3.1/cv_0.3.1_macos_x86_64.tar.gz"
+      sha256 "e027cff0118d3c50010ee5f1f693ebb522d9e70b7e649051cabbe568cc831656"
 
       define_method(:install) do
         bin.install "cv"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/cvfile/cv/releases/download/v0.3.0/cv_0.3.0_macos_arm64.tar.gz"
-      sha256 "7d88157c9824f1ab3d7c33942f160bd5bb99f58d8b3966f1228e128c0abc784a"
+      url "https://github.com/cvfile/cv/releases/download/v0.3.1/cv_0.3.1_macos_arm64.tar.gz"
+      sha256 "00c9ac5d0d44a22a0d552ed9a55db770923e5f451e4c1afc2f0ec1e52b97c7a3"
 
       define_method(:install) do
         bin.install "cv"
@@ -29,15 +29,15 @@ class Cv < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/cvfile/cv/releases/download/v0.3.0/cv_0.3.0_linux_x86_64.tar.gz"
-      sha256 "0a4a6b74173b17f51f8eda5bc96eeb91e979e1ffac0a3e6db4a7f0bf352dace3"
+      url "https://github.com/cvfile/cv/releases/download/v0.3.1/cv_0.3.1_linux_x86_64.tar.gz"
+      sha256 "75ca81aec066df6e0d825617b0e22d0db1273f8cf8de4191c5118fdac175fe06"
       define_method(:install) do
         bin.install "cv"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/cvfile/cv/releases/download/v0.3.0/cv_0.3.0_linux_arm64.tar.gz"
-      sha256 "46f8cf4d574cd33fa3221dc93e87e06eed51f8c99165a3fb334e8580df2b21c4"
+      url "https://github.com/cvfile/cv/releases/download/v0.3.1/cv_0.3.1_linux_arm64.tar.gz"
+      sha256 "a796c9f094a9b86a00bfb86b5674b44dfd30c39a17a5c97bc1affddd1387c6e1"
       define_method(:install) do
         bin.install "cv"
       end
